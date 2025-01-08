@@ -40,6 +40,7 @@ object HttpsGithubComChubatovaTigerGradleTests : GitVcsRoot({
     name = "https://github.com/ChubatovaTiger/GradleTests"
     url = "https://github.com/ChubatovaTiger/GradleTests"
     branch = "refs/heads/master"
+    useMirrors = false
     authMethod = password {
         userName = "ChubatovaTiger"
         password = "credentialsJSON:61d92677-39a4-4689-91b2-ea7788d4356d"
