@@ -1,5 +1,5 @@
-import jetbrains.buildServer.configs.kotlin.v2019_2.*
-import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
+import jetbrains.buildServer.configs.kotlin.v2018_2.*
+import jetbrains.buildServer.configs.kotlin.v2018_2.vcs.GitVcsRoot
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -23,26 +23,41 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 'Debug' option is available in the context menu for the task.
 */
 
-version = "2020.2"
+version = "2019.1"
 
 project {
+    description = "Contains all other projects"
 
-    vcsRoot(HttpsGithubComChubatovaTigerGradleTests)
+    features {
+        feature {
+            id = "PROJECT_EXT_1"
+            type = "ReportTab"
+            param("startPage", "coverage.zip!index.html")
+            param("title", "Code Coverage")
+            param("type", "BuildReportTab")
+        }
+    }
 
-    buildType(Build1)
+    cleanup {
+        preventDependencyCleanup = false
+    }
+
+    subProject(Project1)
 }
 
-object Build1 : BuildType({
-    name = "build1"
+
+object Project1 : Project({
+    name = "project1"
+
+    vcsRoot(Project1_HttpsGithubComChubatovaTigerGradleTests)
 })
 
-object HttpsGithubComChubatovaTigerGradleTests : GitVcsRoot({
+object Project1_HttpsGithubComChubatovaTigerGradleTests : GitVcsRoot({
     name = "https://github.com/ChubatovaTiger/GradleTests"
     url = "https://github.com/ChubatovaTiger/GradleTests"
-    branch = "refs/heads/master"
     useMirrors = false
     authMethod = password {
         userName = "ChubatovaTiger"
-        password = "credentialsJSON:61d92677-39a4-4689-91b2-ea7788d4356d"
+        password = "credentialsJSON:135526e3-a683-4f85-942f-ba049923d60b"
     }
 })
