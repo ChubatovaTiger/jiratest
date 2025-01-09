@@ -2,6 +2,7 @@ package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2018_2.*
 import jetbrains.buildServer.configs.kotlin.v2018_2.BuildType
+import jetbrains.buildServer.configs.kotlin.v2018_2.buildSteps.dotnetTest
 import jetbrains.buildServer.configs.kotlin.v2018_2.ui.*
 
 /*
@@ -15,6 +16,14 @@ create(RelativeId("Dotnet"), BuildType({
 
     vcs {
         root(RelativeId("Dotnet_HttpsGithubComChubatovaTigerDotNetTestsSamples"))
+    }
+
+    steps {
+        dotnetTest {
+            id = "dotnet"
+            projects = "TestProject2/TestProject2.csproj"
+            sdk = "6"
+        }
     }
 }))
 
