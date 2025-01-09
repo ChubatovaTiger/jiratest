@@ -12,5 +12,9 @@ in the project with id = 'Dotnet', and delete the patch script.
 create(RelativeId("Dotnet"), BuildType({
     id("Dotnet_Build1")
     name = "build1"
+
+    vcs {
+        root(RelativeId("Dotnet_HttpsGithubComChubatovaTigerDotNetTestsSamples"))
+    }
 }))
 
