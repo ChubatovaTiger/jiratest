@@ -2,6 +2,7 @@
 <settings>
   <tools>
     <default-versions>
+      <tool-version tool-type="jacoco" id="jacoco.0.8.12" />
       <tool-version tool-type="intellij" id="intellij.ideaIU-2024.2.4" />
     </default-versions>
   </tools>
