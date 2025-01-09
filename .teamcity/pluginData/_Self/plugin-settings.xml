@@ -5,7 +5,7 @@
       <tool-version tool-type="kotlin.compiler" id="kotlin.compiler.2.0.21" />
       <tool-version tool-type="jetbrains.resharper-clt" id="jetbrains.resharper-clt.2024.3.3" />
       <tool-version tool-type="jacoco" id="jacoco.0.8.12" />
-      <tool-version tool-type="intellij" id="intellij.ideaIU-2024.2.4" />
+      <tool-version tool-type="intellij" id="intellij.ideaIU-2024.3" />
     </default-versions>
   </tools>
 </settings>
