@@ -61,6 +61,11 @@ object Comp : BuildType({
         vcs {
         }
     }
+
+    dependencies {
+        snapshot(Dep) {
+        }
+    }
 })
 
 object Dep : BuildType({
