@@ -1,0 +1,8 @@
+version: 1
+jobs:
+  Job2:
+    name: Job 2
+    dependencies:
+    - Job1
+  Job1:
+    name: Job 1
