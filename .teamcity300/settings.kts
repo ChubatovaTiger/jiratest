@@ -34,7 +34,7 @@ project {
 }
 
 object Build2 : BuildType({
-    name = "Build2"
+    name = "Build2a"
 
     vcs {
         root(AbsoluteId("ChubatovaSilent2_Subproject2Silent2_HttpsGithubComChubatovaTiger48974refsHeadsMaster"))
