@@ -30,6 +30,10 @@ project {
 
     buildType(Build2)
 
+    params {
+        param("a", "1")
+    }
+
     pipeline(Ppl3)
 }
 
