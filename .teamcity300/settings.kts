@@ -31,6 +31,7 @@ project {
     buildType(Build2)
 
     params {
+        param("p", "p")
         param("a", "1")
     }
 
