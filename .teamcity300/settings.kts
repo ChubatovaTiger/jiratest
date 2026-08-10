@@ -28,6 +28,7 @@ version = "2026.1"
 
 project {
 
+    buildType(Dep)
     buildType(Build2)
 
     params {
@@ -43,6 +44,14 @@ object Build2 : BuildType({
 
     vcs {
         root(AbsoluteId("ChubatovaSilent2_Subproject2Silent2_HttpsGithubComChubatovaTiger48974refsHeadsMaster"))
+    }
+})
+
+object Dep : BuildType({
+    name = "dep"
+
+    vcs {
+        root(DslContext.settingsRoot)
     }
 })
 
