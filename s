@@ -4,6 +4,3 @@ d
 d
 d
 s
-d
-s
-d
