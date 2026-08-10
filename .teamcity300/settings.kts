@@ -28,6 +28,7 @@ version = "2026.1"
 
 project {
 
+    buildType(Comp)
     buildType(Dep)
     buildType(Build2)
 
@@ -44,6 +45,21 @@ object Build2 : BuildType({
 
     vcs {
         root(AbsoluteId("ChubatovaSilent2_Subproject2Silent2_HttpsGithubComChubatovaTiger48974refsHeadsMaster"))
+    }
+})
+
+object Comp : BuildType({
+    name = "comp"
+
+    type = BuildTypeSettings.Type.COMPOSITE
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
+
+    triggers {
+        vcs {
+        }
     }
 })
 
